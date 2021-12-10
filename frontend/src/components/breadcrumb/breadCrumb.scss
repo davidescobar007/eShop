@@ -1,0 +1,20 @@
+@import "../../common/styles/variables.scss";
+
+.breadCrumb {
+  margin: $parent--margin;
+  padding: 0;
+
+  .breadCrumb__list {
+    list-style-type: none;
+    padding: 0;
+
+    .breadCrumb__item {
+      display: inline-block;
+    }
+
+    .breadCrumb__text {
+      color: $font-color-2;
+      font-weight: bold;
+    }
+  }
+}

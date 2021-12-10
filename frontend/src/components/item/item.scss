@@ -1,0 +1,51 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixin.scss";
+
+.item {
+  @include main-section;
+  padding: 20px;
+
+  .item__parent {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .item__parentImg {
+    flex-grow: 3;
+    img {
+      width: 90%;
+    }
+  }
+
+  .item__parentDetail {
+    flex-grow: 2;
+    color: $font-color-1;
+
+    .item__price-size {
+      font-size: 24px;
+    }
+
+    .item__button {
+      background-color: $base-color2;
+      width: 90%;
+      color: white;
+      border-radius: 3px;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $base-color3;
+      }
+    }
+  }
+
+  .item__description {
+    color: $font-color-1;
+  }
+}
+
+.item-loading {
+  font-size: 30px;
+  background: transparent;
+}

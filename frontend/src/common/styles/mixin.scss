@@ -1,0 +1,6 @@
+@mixin main-section {
+  margin: $parent--margin;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 5px;
+}

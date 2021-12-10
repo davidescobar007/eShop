@@ -1,0 +1,41 @@
+@import "../../common/styles/variables.scss";
+
+.header {
+  background-color: $base-color;
+  width: 100%;
+
+  .header__container--center {
+    margin: $parent--margin;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+
+    .header__logo {
+      height: $height--medium;
+      cursor: pointer;
+    }
+
+    .header__inputSearch {
+      width: calc(95% - 134px);
+
+      .header__input {
+        width: 100%;
+        height: $height--medium;
+        padding-left: 8px;
+        border: none;
+
+        & :focus-visible {
+          border: none;
+        }
+      }
+
+      .header__submitButton {
+        padding-top: 5px;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        color: grey;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import "../../common/styles/variables.scss";
+@import "../../common/styles/mixin.scss";
+
+.seacrhList {
+  @include main-section;
+
+  .seacrhList__item {
+    padding: $padding-medium;
+    margin-bottom: $margin-medium;
+    border-bottom: solid 1px $font-color-3;
+
+    .seacrhList__img {
+      height: 120px;
+      width: 120px;
+      margin-right: 10px;
+    }
+
+    .searchList__price {
+      color: $font-color-1;
+      font-weight: 500;
+    }
+
+    .searchList__title {
+      color: $font-color-2;
+      font-weight: lighter;
+      text-decoration: none;
+      font-size: 17px;
+    }
+  }
+}
+
+.seacrhList-loading{
+  font-size: 30px;
+  background: transparent;
+}
