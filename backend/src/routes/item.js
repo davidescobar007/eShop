@@ -15,7 +15,7 @@ app.get("/item", (req, res) => {
         .then((responseData) => responseData.json())
         .then((description) => {
           let newItem = handleItem(data, description);
-          res.send(data);
+          res.send(newItem);
         });
     });
 });

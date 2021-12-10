@@ -11,27 +11,33 @@ const handleCategoryList = (rowData) => {
   categoryList.forEach((item) => {
     breadCrumb.push(item.name);
   });
-  newObject.categories = breadCrumb;
+  return breadCrumb;
 };
 
 const handleSearchListData = (data) => {
-  handleCategoryList(data.filters);
+  let newObjCopy = {
+    author: { name: "J David", lastname: "Escobar" },
+    results: [],
+    categories: handleCategoryList(data.filters),
+  };
   data.results.forEach((item) => {
-    let newObj = {
-      id: item.id,
-      title: item.title,
-      price: {
-        currency: item.currency_id,
-        amount: item.price,
-        decimals: 00,
-      },
-      picture: item.thumbnail,
-      condition: item.condition,
-      free_shipping: item.shipping.free_shipping,
-    };
-    newObject.results.push(newObj);
+    if (newObjCopy.results.length < 4) {
+      let newObj = {
+        id: item.id,
+        title: item.title,
+        price: {
+          currency: item.currency_id,
+          amount: item.price,
+          decimals: 00,
+        },
+        picture: item.thumbnail,
+        condition: item.condition,
+        free_shipping: item.shipping.free_shipping,
+      };
+      newObjCopy.results.push(newObj);
+    }
   });
-  return newObject;
+  return newObjCopy;
 };
 
 const handleItem = (item, description) => {
@@ -45,7 +51,7 @@ const handleItem = (item, description) => {
       amount: item.price,
       decimals: null,
     },
-    picture: item.picture,
+    picture: item.pictures,
     condition: item.condition,
     free_shipping: item.shipping.free_shipping,
     sold_quantity: item.sold_quantity,
