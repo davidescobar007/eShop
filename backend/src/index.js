@@ -5,8 +5,6 @@ var bodyParser = require("body-parser");
 let cors = require("cors");
 
 process.env.PORT = process.env.PORT || 5000;
-const DATA_BASE_URL =
-"mongodb+srv://david:david007@cluster0.pwkrg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 //middlewares
 app.use(cors());
